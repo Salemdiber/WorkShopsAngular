@@ -8,7 +8,10 @@ import { NotFoundComponent } from './layout/not-found/not-found.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'events', component: ListEventComponent },
+  { path: 'events', loadChildren: () => import('./features/events/events.module').then(m => m.EventsModule) },
+  { path: 'tickets', loadChildren: () => import('./features/tickets/tickets.module').then(m => m.TicketsModule) },
+  { path: 'feedback', loadChildren: () => import('./features/feedback/feedback.module').then(m => m.FeedbackModule) },
+  { path: 'users', loadChildren: () => import('./features/users/users.module').then(m => m.UsersModule) },
   { path: '**', component: NotFoundComponent }
 ];
 

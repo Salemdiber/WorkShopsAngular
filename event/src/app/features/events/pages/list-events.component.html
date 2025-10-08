@@ -1,0 +1,6 @@
+<p>List Events works!</p>
+<ul>
+  <li *ngFor="let event of events">
+    <a [routerLink]="['/events', event.id]">{{ event.titre }}</a>
+  </li>
+</ul>
