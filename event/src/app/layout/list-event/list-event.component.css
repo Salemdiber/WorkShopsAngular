@@ -1,0 +1,69 @@
+.container {
+  max-width: 1200px;
+}
+
+h2 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+input.form-control {
+  max-width: 400px;
+  margin: 0 auto 2rem auto;
+  display: block;
+  border-radius: var(--border-radius);
+  border: 1px solid #ddd;
+  box-shadow: var(--shadow);
+}
+
+.event-card {
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  overflow: hidden;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.event-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px) scale(1.02);
+}
+.event-card .card-title {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+.event-card .card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.event-card img {
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+.event-card .btn-primary {
+  background: var(--primary-color);
+  border: none;
+}
+.event-card .btn-primary:hover {
+  background: var(--primary-dark);
+}
+.event-card .fw-bold.text-primary {
+  font-size: 1.1rem;
+}
+.event-card .small {
+  color: var(--text-light);
+}
+.event-card .mt-auto {
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
