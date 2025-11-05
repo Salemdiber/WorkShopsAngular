@@ -1,0 +1,3 @@
+<div class="container py-4" *ngFor="let u of listUsers">
+    <app-useritem [user]="u" (e)="deleteU($event)"></app-useritem>
+</div>

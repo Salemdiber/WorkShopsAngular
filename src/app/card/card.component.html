@@ -1,0 +1,20 @@
+ <div class="card h-100 shadow-sm"> 
+                <img [src]="event.imageUrl" alt="Event Image"
+                     class="card-img-top img-fluid"
+                     style="height: 200px; object-fit: cover;">
+
+                <div class="card-body">
+                    <h5 class="card-title">{{ event.titre }}</h5>
+                    <p class="text-muted">{{ event.lieu }}</p>
+                    <p>{{ event.description }}</p>
+                    <p class="fw-bold">{{ event.prix }} €</p>
+                    <p>{{ event.date | date:'shortDate'  }}</p>
+
+                    <!-- Bouton Like -->
+                    <button class="btn btn-sm btn-primary" (click)="increment_likes(event)" [disabled]=" campare(event) ">
+                        👍 Like
+                    </button>
+                    <span class="ms-2">{{ event.nbLikes }}</span>
+                </div>
+
+            </div>
